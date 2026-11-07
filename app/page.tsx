@@ -3,7 +3,7 @@
 import {useState,useRef,useEffect} from 'react';
 const PRIMARY='#387b5b';
 export default function Page(){
-  const [msgs,setMsgs]=useState<any[]>([{role:'assistant', content:'Bendiciones! Soy Asistente el Camino. Para consultas bíblicas RVR 1909. Escríbeme: Salmo 50 completo, Juan 14:6, o una pregunta general como ¿Qué es la fe?'}]);
+  const [msgs,setMsgs]=useState<any[]>([{role:'assistant', content:'Bendiciones! Soy Asistente el Camino. Para consultas bíblicas RVR 1909, Juan 14:6'}]);
   const [input,setInput]=useState(''); const [loading,setLoading]=useState(false);
   const endRef=useRef<HTMLDivElement>(null);
   useEffect(()=>{ endRef.current?.scrollIntoView({behavior:'smooth'}); },[msgs,loading]);
@@ -30,7 +30,7 @@ export default function Page(){
         </div>
         <div style={{background:'white', borderRadius:20, padding:'12px 16px', display:'flex', alignItems:'center', gap:12, border:'1px solid #e8e5de'}}>
           <div style={{width:40, height:40, borderRadius:12, background:PRIMARY, color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:20}}>✝️</div>
-          <div style={{flex:1, fontSize:12, color:'#6b6a63'}}>Biblia RVR 1909 de internet • Simple, sin TXT</div>
+          <div style={{flex:1, fontSize:12, color:'#6b6a63'}}></div>
           <button onClick={printChat} title="Imprimir" style={{width:36, height:36, borderRadius:10, border:'1px solid #e8e5de', cursor:'pointer', background:'white'}}>🖨️</button>
           <button onClick={clearChat} title="Borrar" style={{width:36, height:36, borderRadius:10, border:'1px solid #f0c0c0', background:'#fff5f5', cursor:'pointer'}}>🗑️</button>
         </div>
